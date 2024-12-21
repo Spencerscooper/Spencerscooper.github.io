@@ -5,6 +5,7 @@ html{
     scroll-behavior: smooth;
 }
 :root{
+    --bg-black : black;
     --bio-image-bg: #fff;
     --white-font-color : #fff;
     --white-bg-color : white;
@@ -21,37 +22,6 @@ body{
     box-sizing: border-box;
 }
 
-
-/* =============Testing Table ================= */
-table{
-    width : 100%;
-    border-collapse: collapse;
-}
-
-table th, table td {
-    border: 2px solid #ddd; /* Light gray border */
-    padding: 8px; /* Padding for cell content */
-    text-align: left; /* Aligns text to the left */
-    width : 40%;
-}
-table th{
-    color : red;
-    background-color: #f2f2f2; /* Light gray background for headers */
-    font-size: 1.5rem;
-}
-
-table tr:nth-child(even){
-    background-color : rgb(129, 160, 129);
-    color : black;
-}
-table tr:nth-child(odd){
-    background-color: rgb(17, 16, 16);
-    color : white;
-}
-.students_rec_table{
-    width : 90%;
-    margin : 0 auto;
-}
 
 
 
@@ -251,19 +221,10 @@ a{
 }
 
 
-.projects{
-    display : flex;
-    /* overflow: hidden; */
-    justify-content: space-between;
-    align-items: center;
-    /* display : flex; */
 
-
-
-}
 .projects h3{
     color : var(--white-font-color);
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     margin-top : 0.5em;
     padding : 0.3em;
 }
@@ -276,8 +237,8 @@ a{
 
 .projects button{
     width : 90%;
-    font-size : 1rem;
-    padding : .8em;
+    font-size : .7rem;
+    padding : .4em;
     border-radius: 4px;
     margin : .5em 1em;
 
@@ -298,30 +259,28 @@ a{
 /* ==================== */
 
 .project{
-    display: flex;
-    max-width : 100%;
+    overflow: hidden;
     width : 100%;
-    min-height: 400px;
-    margin-inline : auto;
-    justify-content: space-between;
-    gap : 1.3rem;
-   
-    flex-wrap: nowrap;
-    /* flex-wrap: wrap; */
+}
 
-    /* align-content: center; */
+.project::after{
+    content : '';
+    display : table;
+    clear: both;
 
 }
 
-
 .project figcaption{
-    background-color : black;
-    width : 100%;
+    background-color : var(--bg-black);
+    width : 30%;
+    float: left;
+    margin : 12px;
+    /* width : 100%;
     min-width : 100px;
-    align-content: left;
+    align-content: left; */
     box-shadow: 5px 10px 15px rgba(15, 15, 15, 0.5);
     border-radius: 2%;
-    top : 0;
+    /* top : 0; */
  
  
 }
@@ -337,16 +296,6 @@ a{
     border-radius: 2% 2% 0 0 ;
 }
 
-.project{
-    width : 100%;
-    margin : 0 14x 0 14 0;
-    display : flex;
-}
-
-.content{
-    background-color : greenyellow;
-    width : 100%;
-}
 
 .footer{
     height : 15vh;
@@ -451,12 +400,39 @@ a{
     color : var(--yellow-color);
 }
 
+.project figcaption{
+    width : 50%;
+    float: left;
+    margin : 5px;
+
+ 
+ 
+}
+
+
+
+
 }
 
 @media screen and (max-width : 568px){
-    body{
-        background-color: yellowgreen;
-    }
+.banner-bio button{
+width : 70%;
+font-size : 1rem;
+padding : .8em;
+border-radius: 4px;
+
+}
+
+.project figcaption{
+    width : 90%;
+    float: none;
+    margin : 15px auto;
+
+ 
+ 
+}
+
+
 }
 
 
